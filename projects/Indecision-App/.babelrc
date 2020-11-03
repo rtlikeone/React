@@ -1,0 +1,5 @@
+{
+  "presets": ["env", "react"],
+  // use state instead of this.state
+  "plugins": ["transform-class-properties"]
+}
