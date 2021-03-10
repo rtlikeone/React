@@ -1,0 +1,26 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin: 0.5rem;
+	padding: 0.5rem;
+
+	background: lightskyblue;
+	border-radius: 5px;
+	transition: transform 0.2s;
+
+	box-shadow: 5px 5px 5px lightgrey;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	& img {
+		width: 200px;
+	}
+
+	& div {
+		margin: 3rem;
+	}
+}

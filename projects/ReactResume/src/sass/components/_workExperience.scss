@@ -1,0 +1,21 @@
+.work,
+.education {
+  &__experience {
+    display: flex;
+    margin-top: 1rem;
+
+    &--big-child {
+      flex: 1 1 75%;
+    }
+
+    &--small-child {
+      flex: 1 1 25%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--list-items {
+      margin: 0 0 0.625rem 5rem;
+    }
+  }
+}

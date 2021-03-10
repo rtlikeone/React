@@ -1,0 +1,195 @@
+{
+  "languages": {
+    "heading": "Languages",
+    "dutch": "Dutch",
+    "english": "English"
+  },
+  "notFound": {
+    "content": "Page not found."
+  },
+  "proudOf": {
+    "heading": "Most proud of",
+    "content": "Winner for best affiliate website:"
+  },
+  "profile": {
+    "heading": "Profile",
+    "content": "I can describe myself as a creative frontend developer with a healthy dose of humor and empathy. Driven by self-study and passionate about developing interactive websites."
+  },
+  "listWork": {
+    "heading": "Experience",
+    "workData": [
+      {
+        "id": 1,
+        "position": "Frontend Developer Uniware Computer Systems B.V.",
+        "timeframe": "2019 - present",
+        "bulletpoints": [
+          "Frontend development, application for the plant industry",
+          "HTML5, CSS3, Javascript, Vue.js",
+          "I have enjoyed working on renewing the existing application for growers in the flower and plant industry. This was a text-based application, built in C/C++ that had to look more modern and much more intuitive for the end user. I have been working on the UI using HTML5, CSS3, Javascript and Vue.js. In addition, I have renewed existing websites for various customers and transferred it to a modern CMS on WordPress."
+        ]
+      },
+      {
+        "id": 2,
+        "position": "Frontend developer WSLM.NL",
+        "timeframe": "2017 - 2019",
+        "bulletpoints": [
+          "Frontend developer new website development.",
+          "HTML5, CSS3, Javascript, SQL, Wordpress CMS."
+        ]
+      },
+      {
+        "id": 3,
+        "position": "Frontend developer VBEL.NL",
+        "timeframe": "2016 - 2019",
+        "bulletpoints": [
+          "HTML5, CSS3, Javascript, SQL, Wordpress CMS.",
+          "Google Ads, Google Analytics, Google Tag manager."
+        ]
+      },
+      {
+        "id": 4,
+        "position": "Frontend developer AOA autoverzekeringen",
+        "timeframe": "2009 - 2019",
+        "bulletpoints": [
+          "HTML5, CSS3, Javascript, SQL, Wordpress CMS.",
+          "SEO, Google Ads, Google Analytics."
+        ]
+      },
+      {
+        "id": 5,
+        "position": "Salesforce developer Wolfram Chain B.V.",
+        "timeframe": "Mar - 2019",
+        "bulletpoints": [
+          "Salesforce developer recruitment app.",
+          "Frontend development.",
+          "Jira project management."
+        ]
+      },
+      {
+        "id": 6,
+        "position": "IT support / Commercial procurement Hoykon B.V.",
+        "timeframe": "2017 - 2018",
+        "bulletpoints": [
+          "IT support (Zendesk, Outlook, by phone.).",
+          "Procurement hardware / software.",
+          "Quoting / invoicing (Excel).",
+          "Logistics for INTL. customers (Hitachi, Biogen, Cell Signaling Tech.)"
+        ]
+      },
+      {
+        "id": 7,
+        "position": "Sales Rep. The Omni Group",
+        "timeframe": "2007 - 2008",
+        "bulletpoints": [
+          "Direct marketing telecom providers.",
+          "Recruit new business and upgrade existing packages.",
+          "Events (stands), shopping centers, face-face."
+        ]
+      },
+      {
+        "id": 8,
+        "position": "Various temp. jobs",
+        "timeframe": "2003 - 2006",
+        "bulletpoints": ["Direct marketing.", "Sales Rep."]
+      },
+      {
+        "id": 9,
+        "position": "Administrative assistant",
+        "timeframe": "2002 - 2003",
+        "bulletpoints": [
+          "Business insurance policies.",
+          "Life insurance changes.",
+          "Auto insurance changes."
+        ]
+      },
+      {
+        "id": 10,
+        "position": "Sales Rep. Expanding industries",
+        "timeframe": "2000 - 2002",
+        "bulletpoints": [
+          "Direct marketing B2C",
+          "Acquire new business for catering and SME companies.",
+          "Promotion of (new) catering companies.",
+          "Events (stands), shopping centers, face-face."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "educationData": [
+      {
+        "id": 1,
+        "education": "Google Analytics certified",
+        "timeframe": "2017 - 2018"
+      },
+      {
+        "id": 2,
+        "education": "Marketing HBO",
+        "timeframe": "2015 - 2017"
+      },
+      {
+        "id": 3,
+        "education": "International Business MBO",
+        "timeframe": "1998 - 2000"
+      },
+      {
+        "id": 4,
+        "education": "MRM Rotterdam",
+        "timeframe": "1994 - 1998"
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projects",
+    "content": "These are a number of projects that I have enjoyed working on with great pleasure. They range from HTML5, CSS3, Javascript, React and Vue.js to Salesforce.com projects.",
+    "view": "View project",
+    "projectsData": [
+      {
+        "id": 1,
+        "projectName": "Book shelf",
+        "projectInfo": "A digital bookshelf to keep your favorite e-books in order. Nodejs, Express.js, MongoDB database, Javascript, EJS, HTML and CSS."
+      },
+      {
+        "id": 2,
+        "projectName": "Todo App",
+        "projectInfo": "A full stack todo app with a Node.js backend, Express.js server, MongoDB database, Javascript, EJS, HTML and CSS."
+      },
+      {
+        "id": 3,
+        "projectName": "CSV uploader",
+        "projectInfo": "Easily and quickly upload .csv files and view all data sorted alphabetically in a clear table. React, Javascript, HTML and CSS."
+      },
+      {
+        "id": 4,
+        "projectName": "Portfolio template",
+        "projectInfo": "A cool portfolio template with a star on Github. Built with React, Javascript, HTML and CSS."
+      },
+      {
+        "id": 5,
+        "projectName": "Password Manager",
+        "projectInfo": "A Python Tkinter GUI password manager for creating and storing passwords. Python, Tkinter and JSON."
+      },
+      {
+        "id": 4,
+        "projectName": "4-Attention company website",
+        "projectInfo": "Company website for 4-Attention. A distributor for accessories in the flower and plant industry. WordPress, PHP, Javascript, Bootstrap and Sass."
+      },
+      {
+        "id": 4,
+        "projectName": "4-Bulk company website",
+        "projectInfo": "Company website for 4-Bulk. A wholesaler for accessories in the flower and plant industry. WordPress, PHP, Javascript, Bootstrap and Sass."
+      },
+      {
+        "id": 4,
+        "projectName": "Real estate template",
+        "projectInfo": "A clean and sleek real estate template built with passion and React, Javascript, Bootstrap and Sass."
+      },
+      {
+        "id": 4,
+        "projectName": "Startup template",
+        "projectInfo": "A cool startup template built with React. Free to use. React, Javascript, Bootstrap and Sass."
+      }
+    ]
+  }
+}

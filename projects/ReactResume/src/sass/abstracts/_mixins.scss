@@ -1,0 +1,58 @@
+// MEDIA QUERIES
+
+/********************************* 
+0 - 360px         Small screen
+0 - 600px         Phone
+600 - 900px       Tablet portrait
+900 -1200px       Tablet landscape
+1200 - 1800px     Desktop
+1800px +          Big Desktop
+**********************************/
+
+@mixin respond-small-phone {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-portrait {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-landscape {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin respond-desktop {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin respond-big-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin d-none {
+  @media print {
+    display: none;
+  }
+}
+
+@mixin mutate-content($value) {
+  @media print {
+    content: $value;
+  }
+}

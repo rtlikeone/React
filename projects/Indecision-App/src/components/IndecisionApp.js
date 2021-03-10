@@ -6,83 +6,83 @@ import AddOption from "./AddOption";
 import OptionModal from "./OptionModal";
 
 function IndecisionApp(props) {
-  const [options, setOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState(undefined);
-  const title = "Indecision App";
-  const subtitle = "Put your life in the hand of a computer";
+	const [options, setOptions] = useState([]);
+	const [selectedOption, setSelectedOption] = useState(undefined);
+	const title = "Indecision App";
+	const subtitle = "Put your life in the hand of a computer";
 
-  useEffect(() => {
-    try {
-      // getItem to fetch data from localStorage based on "keyname" and parse to save in array
-      const json = localStorage.getItem("options");
-      const options = JSON.parse(json);
+	useEffect(() => {
+		try {
+			// getItem to fetch data from localStorage based on "keyname" and parse to save in array
+			const json = localStorage.getItem("options");
+			const options = JSON.parse(json);
 
-      // Change state only if there are options in localStorage
-      if (options) {
-        setOptions(options);
-      }
-    } catch (e) {
-      console.log(e);
-    }
+			// Change state only if there are options in localStorage
+			if (options) {
+				setOptions(options);
+			}
+		} catch (e) {
+			console.log(e);
+		}
 
-    if (options !== options) {
-      // stringify data to store in localStorage with setItem
-      const json = JSON.stringify(options);
-      // "keyname" and value (setItem, 2 arguments)
-      localStorage.setItem("options", json);
-    }
-  }, []);
+		if (options !== options) {
+			// stringify data to store in localStorage with setItem
+			const json = JSON.stringify(options);
+			// "keyname" and value (setItem, 2 arguments)
+			localStorage.setItem("options", json);
+		}
+	}, []);
 
-  const handlePickOption = () => {
-    const rand = Math.floor(Math.random() * this.state.options.length);
-    const option = this.state.options[rand];
+	const handlePickOption = () => {
+		const rand = Math.floor(Math.random() * this.state.options.length);
+		const option = this.state.options[rand];
 
-    setSelectedOption(option);
-  };
+		setSelectedOption(option);
+	};
 
-  const handleClearSelectedOption = () => {
-    setSelectedOption(undefined);
-  };
+	const handleClearSelectedOption = () => {
+		setSelectedOption(undefined);
+	};
 
-  const handleAddOption = (option) => {
-    if (!option) {
-      return "Add new option to start!";
-    } else if (options.indexOf(option) > -1) {
-      return "You've already added this option!";
-    }
+	const handleAddOption = (option) => {
+		if (!option) {
+			return "Add new option to start!";
+		} else if (options.indexOf(option) > -1) {
+			return "You've already added this option!";
+		}
 
-    setOptions(options.concat(option));
+		setOptions(options.concat(option));
 
-    console.log(options);
-  };
+		console.log(options);
+	};
 
-  const handleRemoveOption = (option) => {
-    setOptions(options.filter((opt) => opt !== option));
-  };
+	const handleRemoveOption = (option) => {
+		setOptions(options.filter((opt) => opt !== option));
+	};
 
-  const handleRemoveAll = () => {
-    setOptions([]);
-  };
+	const handleRemoveAll = () => {
+		setOptions([]);
+	};
 
-  return (
-    <div>
-      <Header title={title} subtitle={subtitle} />
-      <Action
-        hasOptions={options.length > 0}
-        handlePickOption={handlePickOption}
-      />
-      <Options
-        options={options}
-        handleRemoveOption={handleRemoveOption}
-        handleRemoveAll={handleRemoveAll}
-      />
-      <AddOption handleAddOption={handleAddOption} />
-      <OptionModal
-        selectedOption={selectedOption}
-        handleClearSelectedOption={handleClearSelectedOption}
-      />
-    </div>
-  );
+	return (
+		<div>
+			<Header title={title} subtitle={subtitle} />
+			<Action
+				hasOptions={options.length > 0}
+				handlePickOption={handlePickOption}
+			/>
+			<Options
+				options={options}
+				handleRemoveOption={handleRemoveOption}
+				handleRemoveAll={handleRemoveAll}
+			/>
+			<AddOption handleAddOption={handleAddOption} />
+			<OptionModal
+				selectedOption={selectedOption}
+				handleClearSelectedOption={handleClearSelectedOption}
+			/>
+		</div>
+	);
 }
 
 // class IndecisionApp extends React.Component {

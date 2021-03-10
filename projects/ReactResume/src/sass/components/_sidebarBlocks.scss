@@ -1,0 +1,70 @@
+.sidebarBlocks {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-flow: column wrap;
+
+  &__block {
+    color: darken($white, 5%);
+    margin-right: 20%;
+    margin-bottom: 1.25rem;
+
+    & h4 {
+      width: 80%;
+      padding: 0.625rem 0.8rem;
+      background-color: $dark-color;
+    }
+
+    &__content {
+      padding: 1.25rem;
+
+      & .github {
+        & span {
+          @include d-none;
+        }
+
+        :after {
+          @include mutate-content("Github.com/Romson");
+        }
+      }
+
+      & .salesforce {
+        & span {
+          @include d-none;
+        }
+
+        :after {
+          @include mutate-content("Trailblazer.me/id/Romson");
+        }
+      }
+
+      & .linkedin {
+        & span {
+          @include d-none;
+        }
+
+        :after {
+          @include mutate-content("Linkedin.com/in/romerolijkwan");
+        }
+      }
+
+      a {
+        color: darken($white, 5%);
+        text-decoration: none;
+      }
+
+      & .aoa-autoverzekeringen {
+        color: #9e0032;
+        font-weight: 400;
+        margin-top: 0.5rem;
+
+        & span {
+          @include d-none;
+        }
+
+        &:after {
+          @include mutate-content("www.autoverzekering-online-afsluiten.com");
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.wrapper {
+  max-width: $containerwidth;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__sidebar {
+    flex: 1 1 30%;
+    background-color: $primary-color;
+
+    & .adspace {
+      text-align: center;
+      @include d-none;
+    }
+  }
+
+  &__main {
+    flex: 1 1 70%;
+    background-color: #f5f7f9;
+
+    &__content {
+      padding: 3rem;
+    }
+  }
+}

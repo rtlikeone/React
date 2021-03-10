@@ -1,0 +1,55 @@
+.listprojects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__card {
+    @media (min-width: 768px) {
+      display: flex;
+
+      &__image {
+        flex: 1 1 25%;
+      }
+
+      &__content {
+        flex: 1 1 75%;
+      }
+    }
+
+    min-height: 30vh;
+    margin: 2rem 0;
+    box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.15),
+      0 2rem 2rem rgba(0, 0, 0, 0.15);
+
+    &__image {
+      background: $dark-blue;
+      text-align: center;
+    }
+
+    &__content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & p {
+        flex-grow: 1;
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-phone {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  & img {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
