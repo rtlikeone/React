@@ -1,0 +1,9 @@
+.searchBox {
+	display: flex;
+	justify-content: center;
+	padding: 3rem;
+
+	& input {
+		padding: 1rem;
+	}
+}

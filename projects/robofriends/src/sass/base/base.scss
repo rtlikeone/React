@@ -3,7 +3,7 @@
 *::before {
 	margin: 0;
 	padding: 0;
-	// box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
@@ -11,6 +11,6 @@ html {
 	box-sizing: border-box;
 }
 
-// body {
-// 	background: lightgray;
-// }
+body {
+	background: linear-gradient(to left, #1cb5e0, #000046);
+}

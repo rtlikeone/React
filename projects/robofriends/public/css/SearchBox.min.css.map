@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,AAAC,CACV,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,OAAO,CAAE,IAAI,CAKb,AARD,AAKC,UALS,CAKP,KAAK,AAAC,CACP,OAAO,CAAE,IAAI,CACb",
+    "sources": [
+        "../../src/sass/components/SearchBox.scss"
+    ],
+    "names": [],
+    "file": "SearchBox.min.css"
+}
