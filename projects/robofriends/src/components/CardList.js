@@ -1,9 +1,9 @@
 import Card from "./Card";
 
 function CardList({ robots }) {
-	if (true) {
-		throw new Error("Something went wrong...");
-	}
+	// if (true) {
+	// 	throw new Error("Something went wrong...");
+	// }
 	return (
 		<div className="container">
 			{robots.map((robot) => {
