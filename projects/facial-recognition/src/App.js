@@ -7,7 +7,7 @@ import FaceRecognition from "./components/FaceRecognition";
 import "./sass/main.scss";
 
 const app = new Clarifai.App({
-  apiKey: "425ca4e090ee446691c84ee7066452e7",
+  apiKey: "*****************",
 });
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
   const onButtonSubmit = () => {
     setImageUrl(input);
 
+    // More models here:
+    // https://github.com/Clarifai/clarifai-javascript/blob/master/src/index.js
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, input)
       .then((response) => {
