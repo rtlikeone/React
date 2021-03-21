@@ -13,6 +13,25 @@ const app = new Clarifai.App({
 function App() {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [boxData, setBoxData] = useState({});
+
+  const calculateFaceLocation = (data) => {
+    const box = data;
+
+    console.log("App.js data");
+    console.log(data);
+
+    const image = document.getElementById("inputimage");
+    const width = Number(image.width);
+    const height = Number(image.height);
+    const newBox = {
+      left: box.left_col * width,
+      top: box.top_row * height,
+      right: width - box.right_col * width,
+      bottom: height - box.bottom_row * height,
+    };
+    setBoxData(newBox);
+  };
 
   const onInputChange = (e) => {
     const imageSrc = e.target.value;
@@ -27,7 +46,7 @@ function App() {
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, input)
       .then((response) => {
-        console.log(
+        calculateFaceLocation(
           response.outputs[0].data.regions[0].region_info.bounding_box
         );
       })
@@ -46,7 +65,7 @@ function App() {
             onInputChange={onInputChange}
             onButtonSubmit={onButtonSubmit}
           />
-          <FaceRecognition imageUrl={imageUrl} />
+          <FaceRecognition imageUrl={imageUrl} boxData={boxData} />
         </div>
       </div>
     </>
