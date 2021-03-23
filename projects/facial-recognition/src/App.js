@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Clarifai from "clarifai";
 import Navigation from "./components/Navigation";
+import Signin from "./components/Signin";
 import ImageLinkForm from "./components/ImageLinkForm";
 import Rank from "./components/Rank";
 import FaceRecognition from "./components/FaceRecognition";
@@ -11,9 +12,15 @@ const app = new Clarifai.App({
 });
 
 function App() {
+  const [route, setRoute] = useState("signin");
+  const [boxData, setBoxData] = useState({});
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [boxData, setBoxData] = useState({});
+
+  const onRouteChange = (route) => {
+    const newRoute = route;
+    setRoute(newRoute);
+  };
 
   const calculateFaceLocation = (data) => {
     const box = data;
@@ -55,17 +62,27 @@ function App() {
       });
   };
 
+  {
+    console.log(route);
+  }
+
   return (
     <>
-      <Navigation />
+      <Navigation route={route} onRouteChange={onRouteChange} />
       <div className="container">
-        <div className="row justify-content-center text-center my-4">
-          <Rank />
-          <ImageLinkForm
-            onInputChange={onInputChange}
-            onButtonSubmit={onButtonSubmit}
-          />
-          <FaceRecognition imageUrl={imageUrl} boxData={boxData} />
+        <div className="row justify-content-center my-4">
+          {route === "signin" ? (
+            <Signin onRouteChange={onRouteChange} />
+          ) : (
+            <>
+              <Rank />
+              <ImageLinkForm
+                onInputChange={onInputChange}
+                onButtonSubmit={onButtonSubmit}
+              />
+              <FaceRecognition imageUrl={imageUrl} boxData={boxData} />
+            </>
+          )}
         </div>
       </div>
     </>

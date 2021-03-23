@@ -1,6 +1,6 @@
 function ImageLinkForm({ onInputChange, onButtonSubmit }) {
   return (
-    <div className="col-lg-8 col-md-8 col-sm col-xs my-2">
+    <div className="col-lg-8 col-md-8 col-sm col-xs my-2 text-center">
       <div className="border rounded p-5">
         <h2 className="font-weight-bold">Upload an image</h2>
         <p className="font-weight-light text-muted">

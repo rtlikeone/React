@@ -1,6 +1,6 @@
 import bot from "../img/bot.png";
 
-function Navigation() {
+function Navigation({ route, onRouteChange }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -22,8 +22,13 @@ function Navigation() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-2 mb-lg-0 ml-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">
-                Sign in
+              <a
+                onClick={() => onRouteChange("signin")}
+                className="nav-link"
+                aria-current="page"
+                href="/"
+              >
+                {route === "home" ? "Sign out" : "Sign in"}
               </a>
             </li>
             <li className="nav-item">
