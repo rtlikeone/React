@@ -1,6 +1,14 @@
-import bot from "../img/bot.png";
+import bot from "../../img/bot.png";
 
 function Navigation({ route, onRouteChange }) {
+  const handleOnRouteChange = () => {
+    onRouteChange("signin");
+  };
+
+  const handleRegister = () => {
+    onRouteChange("register");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -23,16 +31,16 @@ function Navigation({ route, onRouteChange }) {
           <ul className="navbar-nav mb-2 mb-lg-0 ml-auto">
             <li className="nav-item">
               <a
-                onClick={() => onRouteChange("signin")}
+                onClick={handleOnRouteChange}
                 className="nav-link"
                 aria-current="page"
-                href="/"
+                href="#"
               >
                 {route === "home" ? "Sign out" : "Sign in"}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a onClick={handleRegister} className="nav-link" href="#">
                 Register
               </a>
             </li>

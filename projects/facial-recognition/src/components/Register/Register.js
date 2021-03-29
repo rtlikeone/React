@@ -1,8 +1,25 @@
-function Signin({ onRouteChange }) {
+function Register({ onRouteChange }) {
+  const handleOnRouteChange = () => {
+    onRouteChange("home");
+  };
+
   return (
     <div className="col-lg-8 col-md-8 col-sm col-xs my-2">
       <div className="border rounded p-5">
         <form>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">
+              Name
+            </label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                placeholder="Name"
+              />
+            </div>
+          </div>
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label">
               Email
@@ -34,9 +51,9 @@ function Signin({ onRouteChange }) {
               <button
                 type="submit"
                 class="btn btn-primary"
-                onClick={() => onRouteChange("home")}
+                onClick={handleOnRouteChange}
               >
-                Sign in
+                Register
               </button>
             </div>
           </div>
@@ -46,4 +63,4 @@ function Signin({ onRouteChange }) {
   );
 }
 
-export default Signin;
+export default Register;

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Clarifai from "clarifai";
-import Navigation from "./components/Navigation";
-import Signin from "./components/Signin";
-import ImageLinkForm from "./components/ImageLinkForm";
-import Rank from "./components/Rank";
-import FaceRecognition from "./components/FaceRecognition";
+import Navigation from "./components/Navigation/Navigation";
+import Signin from "./components/Signin/Signin";
+import Register from "./components/Register/Register";
+import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
+import Rank from "./components/Rank/Rank";
+import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import "./sass/main.scss";
 
 const app = new Clarifai.App({
@@ -20,13 +21,14 @@ function App() {
   const onRouteChange = (route) => {
     const newRoute = route;
     setRoute(newRoute);
+    // console.log(route);
   };
 
   const calculateFaceLocation = (data) => {
     const box = data;
 
-    console.log("App.js data");
-    console.log(data);
+    // console.log("App.js data");
+    // console.log(data);
 
     const image = document.getElementById("inputimage");
     const width = Number(image.width);
@@ -62,9 +64,7 @@ function App() {
       });
   };
 
-  {
-    console.log(route);
-  }
+  console.log(route);
 
   return (
     <>
@@ -73,6 +73,8 @@ function App() {
         <div className="row justify-content-center my-4">
           {route === "signin" ? (
             <Signin onRouteChange={onRouteChange} />
+          ) : route === "register" ? (
+            <Register onRouteChange={onRouteChange} />
           ) : (
             <>
               <Rank />
