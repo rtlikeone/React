@@ -39,11 +39,13 @@ function Navigation({ route, onRouteChange }) {
                 {route === "home" ? "Sign out" : "Sign in"}
               </a>
             </li>
-            <li className="nav-item">
-              <a onClick={handleRegister} className="nav-link" href="#">
-                Register
-              </a>
-            </li>
+            {route === "signin" && (
+              <li className="nav-item">
+                <a onClick={handleRegister} className="nav-link" href="#">
+                  Register
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
