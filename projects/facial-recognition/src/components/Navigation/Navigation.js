@@ -1,10 +1,9 @@
 import bot from "../../img/bot.png";
 
-function Navigation({ route, onRouteChange }) {
+function Navigation({ route, onRouteChange, isLoggedIn }) {
   const handleOnRouteChange = () => {
     onRouteChange("signin");
   };
-
   const handleRegister = () => {
     onRouteChange("register");
   };
@@ -29,22 +28,39 @@ function Navigation({ route, onRouteChange }) {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-2 mb-lg-0 ml-auto">
-            <li className="nav-item">
-              <a
-                onClick={handleOnRouteChange}
-                className="nav-link"
-                aria-current="page"
-                href="#"
-              >
-                {route === "home" ? "Sign out" : "Sign in"}
-              </a>
-            </li>
-            {route === "signin" && (
+            {isLoggedIn ? (
               <li className="nav-item">
-                <a onClick={handleRegister} className="nav-link" href="#">
-                  Register
+                <a
+                  onClick={handleOnRouteChange}
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  Sign out
                 </a>
               </li>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <a
+                    onClick={handleOnRouteChange}
+                    className="nav-link"
+                    aria-current="page"
+                    href="#signin"
+                  >
+                    Sign in
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    onClick={handleRegister}
+                    className="nav-link"
+                    href="#register"
+                  >
+                    Register
+                  </a>
+                </li>
+              </>
             )}
           </ul>
         </div>

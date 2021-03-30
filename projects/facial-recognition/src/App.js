@@ -9,10 +9,11 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import "./sass/main.scss";
 
 const app = new Clarifai.App({
-  apiKey: "*****************",
+  apiKey: "*****",
 });
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [route, setRoute] = useState("signin");
   const [boxData, setBoxData] = useState({});
   const [input, setInput] = useState("");
@@ -20,16 +21,12 @@ function App() {
 
   const onRouteChange = (route) => {
     const newRoute = route;
+    newRoute === "home" ? setIsLoggedIn(true) : setIsLoggedIn(false);
     setRoute(newRoute);
-    // console.log(route);
   };
 
   const calculateFaceLocation = (data) => {
-    const box = data;
-
-    // console.log("App.js data");
-    // console.log(data);
-
+    const box = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById("inputimage");
     const width = Number(image.width);
     const height = Number(image.height);
@@ -55,20 +52,20 @@ function App() {
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, input)
       .then((response) => {
-        calculateFaceLocation(
-          response.outputs[0].data.regions[0].region_info.bounding_box
-        );
+        calculateFaceLocation(response);
       })
       .catch((err) => {
         console.log(`Error: ${err}`);
       });
   };
 
-  console.log(route);
-
   return (
     <>
-      <Navigation route={route} onRouteChange={onRouteChange} />
+      <Navigation
+        isLoggedIn={isLoggedIn}
+        route={route}
+        onRouteChange={onRouteChange}
+      />
       <div className="container">
         <div className="row justify-content-center my-4">
           {route === "signin" ? (

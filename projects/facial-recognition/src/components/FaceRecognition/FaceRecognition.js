@@ -1,6 +1,6 @@
 function FaceRecognition({ imageUrl, boxData }) {
   return (
-    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
       {imageUrl && (
         <img
           id="inputimage"

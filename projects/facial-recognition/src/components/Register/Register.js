@@ -8,7 +8,7 @@ function Register({ onRouteChange }) {
       <div className="border rounded p-5">
         <form>
           <div class="form-group row">
-            <label for="inputName" class="col-sm-2 col-form-label">
+            <label htmlFor="inputName" class="col-sm-2 col-form-label">
               Name
             </label>
             <div class="col-sm-10">
@@ -21,7 +21,7 @@ function Register({ onRouteChange }) {
             </div>
           </div>
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">
+            <label htmlFor="inputEmail3" class="col-sm-2 col-form-label">
               Email
             </label>
             <div class="col-sm-10">
@@ -34,7 +34,7 @@ function Register({ onRouteChange }) {
             </div>
           </div>
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">
+            <label htmlhtmlFor="inputPassword3" class="col-sm-2 col-form-label">
               Password
             </label>
             <div class="col-sm-10">
