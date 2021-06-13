@@ -1,3 +1,0 @@
-# ReactResume
-
-### Built with React
